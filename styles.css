@@ -16,7 +16,12 @@ body {
   justify-content: space-between;
   padding: 20px 50px;
   background: #1F4E79;
+  opacity: 99%;
   color: white;
+
+  position: sticky;   /* 👈 this is the key */
+  top: 0;             /* 👈 sticks to top */
+  z-index: 1000;      /* 👈 keeps it above other content */
 }
 
 .navbar a {
