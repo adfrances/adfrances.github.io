@@ -6,10 +6,6 @@
   --background-color: #BAC5CC;
 }
 
-/* html{scroll-behavior:smooth;} */
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +18,10 @@ body {
   color: #2B2B2B;
 }
 
+strong {
+  font-weight: bold;
+}
+
 /* Navbar */
 .navbar {
   position: sticky;   /* 👈 this is the key */
@@ -29,12 +29,14 @@ body {
   z-index: 1000;      /* 👈 keeps it above other content */
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 10px 50px;
   background: var(--primary-color);
   opacity: 99%;
   color: var(--text-color);
-  border-bottom: 1.5px solid var(--secondary-color);
+  /* border-bottom: 1.5px solid var(--secondary-color); */
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
 }
 
 .navbar a {
@@ -43,38 +45,69 @@ body {
   text-decoration: none;
 }
 
+.logo:hover {
+    text-decoration:dotted underline var(--secondary-color) 5px;
+}
 
 .logo {
   font-weight: bold;
+  font-size: 30px;
+}
+
+.nav-list {
   font-size: 20px;
+  font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
-  /* background: linear-gradient(to right, var(--background-color), var(--accent-color)  ); */
   color: var(--text-color);
   font-size: 30px;
-  padding: 100px 50px;
+  padding: 50px 40px;
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 600px 1fr;
   gap: 10%;
   align-items: center;
+  justify-content: space-between;
+  /* border-bottom: 1.5px solid var(--secondary-color); */
 }
 
 
-.headshot img {
+.hero-headshot img {
   width: 300px;
   height: auto;
   box-shadow:
-  5px 5px 0 #FFC107,
-  10px 10px 0 #FF9800,
-  15px 15px 0 #607D8B;
+  5px 5px 0 var(--background-color),
+  10px 10px 0 var(--primary-color),
+  15px 15px 0 var(--secondary-color);
 }
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text a {
+  color: var(--text-color);
+  font-weight: 500;
+  text-underline-offset: 3px;
+}
+
 
 .hero h1 {
   font-size: 60px;
+  text-shadow: 2px 4px var(--background-color);
+  /* scrollbar-shadow-color: #1F4E79; */
+}
+
+.hero h6 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: var(--text-color);
+  font-weight: lighter;
+  line-height: 1.75;
 }
 
 .hero span {
@@ -97,6 +130,10 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 50px;
+  margin: 0 0;
+  justify-content: space-between;
+  /* background: linear-gradient(to top, var(--accent-color), var(--primary-color)  ); */
+
 }
 
 .card {
@@ -109,7 +146,12 @@ body {
 /* About */
 .about {
   padding: 50px;
-  background: #FFFFFF;
+  background-color: white;
+  padding: 20px 40px;
+  margin: 0 50px;
+  border: 1px solid #D9D9D9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
 }
 
 .about h2 {
