@@ -4,7 +4,7 @@
   --secondary-color: #AB828E;
   --lightersecondary-color: #a3b03e6a;
   --text-color: #2a5b49eb;
-  --lightertext-color: #9e93cd;
+  --lightertext-color: #9e93cd90;
   --accent-color: #76998D;
   --lighter-color: #b8dcd0;
   --background-color: #BAC5CC;
@@ -107,7 +107,7 @@ strong {
   gap: 10%;
   align-items: center;
   justify-content: space-between;
-  border-bottom: var(--bottom-border-size) dotted  var(--lightersecondary-color);
+  border-bottom: var(--bottom-border-size) dotted  var(--lightertext-color);
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -171,9 +171,8 @@ strong {
   font-size:36px;
   font-weight:bold;
   width:100%;
-  /* bottom:45%; */
+  padding-top: 50px;
   display:block;
-  margin: 20px 0;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -221,8 +220,8 @@ strong {
 .features {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
-  border-bottom: var(--bottom-border-size) dotted  var(--lightersecondary-color);
+  padding: 50px 0;
+  border-bottom: var(--bottom-border-size) dotted  var(--lightertext-color);
 }
 
 .card {
@@ -237,7 +236,7 @@ strong {
   padding-bottom: 50px;
   line-height: 1.75;
   color: var(--text-color);
-  border-bottom: var(--bottom-border-size) dotted  var(--lightersecondary-color);
+  border-bottom: var(--bottom-border-size) dotted  var(--lightertext-color);
 
 }
 
@@ -248,7 +247,7 @@ strong {
 
 /* Publications */
 .publications {
-  padding: 50px 0;
+  padding-top: 50px;
 }
 
 .pub-grid {
@@ -317,6 +316,43 @@ strong {
   background-color: var(--accent-color);
   color: white;
   font-weight: normal;
+}
+
+
+
+/* Testing */
+
+
+.test {
+	--block-size: 25vmax;
+	display: grid;
+	grid-template-columns: repeat(2, var(--block-size));
+	grid-template-rows: repeat(2, var(--block-size));
+	grid-gap: 2em;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+.item	{
+	background: var(--accent-color);
+  /* background-color: red ; */
+	display: grid;
+	place-items: center;
+	border-radius: 4px;
+	transition: opacity 0.4s ease;
+}
+
+.test:hover .item {
+	opacity: 0.3;
+}
+
+.test:hover .item:hover {
+	opacity: 1;
+}
+
+.page {
+  margin: 50px 0;
+	/* margin: 0 auto; */
 }
 
 /* Contact */
