@@ -19,10 +19,12 @@
   font-family:  "BuckeyeSerif", "Georgia", serif;
 }
 
+
+
 .background- {
   background: var(--primary-color);
-  margin: 0 300px; 
-  padding: 0 0;
+  margin: 0 0; 
+  padding: 0 20%;
 }
 
 body {
@@ -31,7 +33,6 @@ body {
 }
 
 .fa {
-  padding: 20px;
   font-size: 30px;
   width: 50px;
   text-align: center;
@@ -51,60 +52,74 @@ strong {
   display: flex;
   justify-content: space-between;
   padding: 5px 50px;
-  background: var(--primary-color);
-  opacity: 99%;
+  /* background: var(--primary-color); */
   color: var(--text-color);
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  /* box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
+  backdrop-filter: blur(10px);
 
 }
 
 .navbar a {
   color: var(--text-color);
-  margin-left: 20px;
   text-decoration: none;
+  padding: 5px;
 }
 
+
+
 .logo:hover {
-    text-decoration: var(--bottom-border-size) dotted underline var(--lightersecondary-color) ;
+    /* text-decoration: var(--bottom-border-size) dotted underline var(--lightersecondary-color) ; */
+    transform: translateY(-2px); /* Lifts the card slightly */
+    filter: drop-shadow( 5px 5px 3px rgba(0,0,0,0.1)); /* Adds a soft shadow */
 }
 
 .logo {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
 }
 
 .nav-list {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  background-color: var(--lighter-color);
+  border-radius: 4px;
+  align-items: center;
+  /* font-weight: bold; */
+}
+
+.nav-list:hover {
+  /* text-decoration: var(--bottom-border-size) dotted underline var(--lightersecondary-color) ; */
+  transform: translateY(-2px); /* Lifts the card slightly */
+  filter: drop-shadow( 5px 5px 3px rgba(0,0,0,0.1)); /* Adds a soft shadow */
 }
 
 /* Hero Section */
 .hero {
   color: var(--text-color);
   font-size: 30px;
-  display: flex;
-  grid-template-columns: 600px 1fr;
+  display: grid;
+  grid-template-columns: 30% auto;
   gap: 10%;
   align-items: center;
   justify-content: space-between;
   border-bottom: var(--bottom-border-size) dotted  var(--lightersecondary-color);
-  padding: 50px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 
 .hero-headshot img {
-  width: 300px;
-  height: auto;
-  box-shadow:
-  5px 5px 0 var(--secondary-color),
-  7px 7px 0 var(--lightersecondary-color)
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-}
 
 .hero-text a {
   color: var(--text-color);
@@ -114,12 +129,18 @@ strong {
 
 .social-icons {
   display: flex;
+  padding-top: 20px;
   flex-direction: row;
   justify-content: space-between;
-  /* gap: 50px; */
-  margin: auto auto;
-  margin-top: 10px;
+  filter:drop-shadow(5px 5px 4px rgba(0,0,0,0.1));  
 }
+
+.fa.fa-linkedin:hover, .fa.fa-graduation-cap:hover, .fa.fa-envelope:hover {
+  transform: translateY(-5px); /* Lifts the card slightly */
+  filter: drop-shadow( 5px 5px 4px rgba(0,0,0,0.1)); /* Adds a soft shadow */
+  /* border-bottom: 1px solid #D9D9D9; */
+  }
+
 
 .hero h1 {
   font-size: 60px;
@@ -128,7 +149,7 @@ strong {
 
 .hero h6 {
   font-size: 18px;
-  margin-top: 20px;
+  margin-top: 10px;
   color: var(--text-color);
   font-weight: lighter;
   line-height: 1.75;
@@ -142,11 +163,65 @@ strong {
   margin: 20px 0;
 }
 
+/* Research flips */
+
+#container {
+  color:var(--text-color);
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  width:100%;
+  /* bottom:45%; */
+  display:block;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:50px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background: var(--accent-color);
+}
+#flip div:first-child div {
+  background: var(--secondary-color);
+}
+#flip div:last-child div {
+  background: var(--lightertext-color);
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
 /* Features */
 .features {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0;
+  padding: 20px 0;
   border-bottom: var(--bottom-border-size) dotted  var(--lightersecondary-color);
 }
 
@@ -227,14 +302,21 @@ strong {
 
 .publication-button {
   border-radius: 5px;
-  border: none;
-  box-shadow: 10px 10px 30px rgba(0,0,0,0.1); /* Adds a soft shadow */
+  background-color: transparent;
+  border: 1.5px solid var(--accent-color);
+  /* background-color: var(--accent-color); */
+  font-weight: bold;
+  color: var(--text-color);
   padding: 10px 20px;
+  filter: drop-shadow( 5px 5px 1px rgba(0,0,0,0.1)); /* Adds a soft shadow */
 }
 
 .publication-button:hover {
+  transform: translateY(-5px); /* Lifts the card slightly */
+  filter: drop-shadow( 5px 5px 3px rgba(0,0,0,0.1)); /* Adds a soft shadow */
   background-color: var(--accent-color);
   color: white;
+  font-weight: normal;
 }
 
 /* Contact */
