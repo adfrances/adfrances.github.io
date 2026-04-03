@@ -257,6 +257,8 @@ strong {
   gap: 20px;
 }
 
+
+
 .pub-list a {
   list-style: none;
   display: flex;
@@ -266,19 +268,24 @@ strong {
   padding-left: 10px;
   margin: 0;
   gap: 30px;
-  /* border-bottom: 1px solid #D9D9D9; */
-  /* box-shadow: 0 0 100px rgba(0,0,0,0.1); */
+  border-radius: 18px;
+  box-shadow: 10px 10px 50px rgba(0,0,0,0.1); 
   text-decoration: none;
   color: var(--text-color);
-  /* background-color: var(--darker-background-color); */
 }
 
-.pub-list:hover {
+.pub-grid:hover .pub-list {
+  opacity: .3;
+}
+
+.pub-grid:hover .pub-list:hover {
+  opacity: 1;
   transform: translateY(-5px); /* Lifts the card slightly */
-  box-shadow: 10px 10px 30px rgba(0,0,0,0.1); /* Adds a soft shadow */
-  /* border-bottom: 1px solid #D9D9D9; */
+  transition: transform 0.5s ease;     
+  box-shadow: 10px 10px 50px rgba(0,0,0,0.1); 
+  border-radius: 18px;
+  /* border: 1px dashed var(--text-color); */
 }
-
 
 .pub-item {
   padding: 0 10px;
@@ -342,7 +349,7 @@ strong {
 	transition: opacity 0.4s ease;
   grid-template-rows: 1fr 1fr;
   overflow: hidden;
-  transition: transform 0.5s ease;     /* 👈 apply here */
+  transition: transform 0.5s ease;   
   text-decoration: none;
 
 }
