@@ -324,7 +324,7 @@ strong {
 
 
 .test {
-	--block-size: 50%;
+	--block-size: 30vmax;
 	display: grid;
 	grid-template-columns: repeat(2, var(--block-size));
 	grid-template-rows: repeat(2, var(--block-size));
