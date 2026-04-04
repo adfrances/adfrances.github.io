@@ -269,7 +269,7 @@ strong {
   padding-left: 10px;
   margin: 0;
   gap: 30px;
-  border-radius: 18px;
+  /* border-radius: 18px; */
   border-bottom: 1px solid var(--darkerprimary-color);
   /* box-shadow: 10px 10px 50px rgba(0,0,0,0.1);  */
   text-decoration: none;
@@ -286,7 +286,7 @@ strong {
   transform: translateY(-5px); /* Lifts the card slightly */
   transition: transform 0.5s ease;     
   box-shadow: 10px 10px 50px rgba(0,0,0,0.1); 
-  border-radius: 18px;
+  /* border-radius: 18px; */
   /* border: 1px dashed var(--text-color); */
 }
 
@@ -392,7 +392,6 @@ strong {
 
 .research_desc_pills_section {
   display: flex; 
-  /* align-items: flex-start; */
   gap: 10px; 
   margin: 3% 0;
 }
